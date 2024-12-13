@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp30
+{ /*Soru 5 - While Döngüsü ile Tahmin Oyunu 
+Kullanıcıdan bir sayı tahmin etmesini isteyen bir program yazınız. Program, doğru tahmin yapılana kadar kullanıcıdan yeni tahminler almaya devam etmelidir. 
+Doğru tahmin yapıldığında ekrana bir tebrik mesajı yazdırılmalıdır.
+Not: Sabit bir sayı belirleyebilir veya Random sınıfı ile rastgele bir sayı oluşturabilirsiniz.*/
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int tahmin, sayi;
+            sayi = 3;
+            tahmin = 0;
+            Console.WriteLine("Bir sayı tahmin ediniz");
+          
+            while (tahmin != sayi)
+            { tahmin = int.Parse(Console.ReadLine()); 
+                if (tahmin < sayi)
+                { Console.WriteLine("Daha büyük bir sayı tahmin ediniz:");
+                }
+                else if (tahmin > sayi)
+                { Console.WriteLine("Daha küçük bir sayı tahmin ediniz:"); 
+                } 
+            }
+            Console.WriteLine("Tebrikler! Doğru tahmin ettiniz.");
+        }
+    }
+
+
+
+
+}
+   
+
